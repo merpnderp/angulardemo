@@ -14,7 +14,9 @@ var angular2_1 = require('angular2/angular2');
 var service_1 = require('./service');
 var MyAppComponent = (function () {
     function MyAppComponent(service) {
-        this.name = service.getHello(); //'Alice';
+        var _this = this;
+        this.greeting = service.getGreeting();
+        setTimeout(function () { return _this.greeting = 'Howdy'; }, 1000); //'Alice';
     }
     MyAppComponent = __decorate([
         angular2_1.Component({
@@ -22,7 +24,7 @@ var MyAppComponent = (function () {
             appInjector: [service_1.Service]
         }),
         angular2_1.View({
-            template: " <h1> Hello {{ name }} </h1>" // Defines the inline template for the component
+            template: ' <h1> {{greeting}} World </h1>' // Defines the inline template for the component
         }), 
         __metadata('design:paramtypes', [service_1.Service])
     ], MyAppComponent);

@@ -2,7 +2,7 @@
 export class Service{
 	constructor(){
 	}
-	getHello(){
+	getGreeting(){
 		return "Hello";
 	}
 }

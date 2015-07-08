@@ -9,13 +9,14 @@ import {Service} from './service';
 })
 
 @View({
-	template: ` <h1> Hello {{ name }} </h1>` // Defines the inline template for the component
+	template: ' <h1> {{greeting}} World </h1>' // Defines the inline template for the component
 })
 
 class MyAppComponent {
-	name: string;
+	greeting: string;
 	constructor(service: Service) {
-		this.name = service.getHello();//'Alice';
+		this.greeting = service.getGreeting();
+		setTimeout(()=>this.greeting = 'Howdy', 1000);//'Alice';
 	}
 }
 
