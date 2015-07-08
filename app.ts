@@ -3,8 +3,6 @@
 import {Component, View, bootstrap} from 'angular2/angular2';
 import {Service} from './service';
 
-
-
 @Component({
 	selector: 'my-app', // Defines the <my-app></my-app> tag
 	appInjector: [Service]
